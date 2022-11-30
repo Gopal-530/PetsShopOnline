@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/page_title"
+                android:orientation="vertical"
+                android:layout_height="220dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:src="@drawable/cat_image"
+                            android:padding="10dp"
+                            android:layout_height="match_parent">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="10dp"
+                        android:weightSum="3"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:text="Company Name"
+                            android:layout_height="0dp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="0dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Location:"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppinsemibold"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:text=" AI Nahada 1-Dubai"
+                                android:fontFamily="@font/poppinsregular"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="0dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Number:"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppinsemibold"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:text=" +971567899654"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/category_image"
+                        android:layout_height="match_parent">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/click"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+
+                    android:background="@drawable/layout_bg"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Dog Supplies"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="GROOMING"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/pet_store_pricing_list"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+</LinearLayout>

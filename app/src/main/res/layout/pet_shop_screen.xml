@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/card"
+    android:padding="10dp"
+    android:background="@drawable/layout_bg__pet_shop"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10sp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivImgee"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:src="@drawable/brands2"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:text="Location:AI Qasima Sharjah"
+            android:fontFamily="@font/poppinsmedium"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:text="Min Order: Aed 50"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+
+            android:fontFamily="@font/poppinsmedium"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="-10dp"
+            android:src="@drawable/rating" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="shop now"
+            android:textSize="10sp"
+            android:layout_height="40dp">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

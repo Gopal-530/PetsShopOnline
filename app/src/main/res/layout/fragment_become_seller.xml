@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/page_title"
+        android:layout_height="85dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/become_seller"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsemibold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/representative_name"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/first_name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/last_name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/trade_name"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Address:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="flat Or Shop No"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Building Name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Streat:"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Area:"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Emirates:"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Contact No:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Number"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Alternative Number"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Whatsapp Number:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Email Address:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Category:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:hint="Pets"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:textSize="12sp"
+                        android:hint="If Products (Minimum Order)"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Vat certificate:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Select a file"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="55dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:text="Choose File"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/colorE"
+                        android:layout_height="match_parent">
+
+                    </Button>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="No file chosen"
+                        android:textColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Trade License:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Select a file"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="55dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:text="Choose File"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/colorE"
+                        android:layout_height="match_parent">
+
+                    </Button>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="No file chosen"
+                        android:textColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Bank detals:"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsemibold"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="A/C Name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Bank Name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="A/C Number"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="IBAN Name"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_bg_new"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text="@string/terms_cond"
+                        android:layout_height="wrap_content">
+
+                    </CheckBox>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:text="submit"
+                        android:backgroundTint="@color/light_blue_color"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </Button>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/card"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="FULL GROOMING"
+            android:layout_marginTop="5dp"
+
+            android:fontFamily="@font/poppinsemibold"/>
+
+        <View
+            android:layout_width="100dp"
+            android:background="@color/yellow"
+            android:layout_height="2dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Shower (Shampoo &amp; Conditioner)"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Blow Dry &amp; Coat Comb"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Nail Trimming"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Ear Cleaning"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Paw Pad Trimming"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Teath Cleaning"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Glands Expression"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/layout_bg_brown"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Cats"
+                            android:padding="5dp"
+                            android:textSize="8sp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Aed"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mrp_one"
+                            android:layout_width="wrap_content"
+                            android:text="241"
+                            android:textSize="8sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="221"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/layout_bg_brown"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Large Breed Dogs"
+                            android:padding="5dp"
+                            android:textSize="8sp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Aed"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mrp_two"
+                            android:layout_width="wrap_content"
+                            android:text="241"
+                            android:textSize="8sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="221"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/layout_bg_brown"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:textSize="8sp"
+                            android:text="Small Breed Dog"
+                            android:textColor="@color/white">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Aed"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mrp_three"
+                            android:layout_width="wrap_content"
+                            android:text="241"
+                            android:textSize="8sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="221"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/layout_bg_brown"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Medium Breed Dog"
+                            android:padding="5dp"
+                            android:textSize="8sp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Aed"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mrp_four"
+                            android:layout_width="wrap_content"
+                            android:text="241"
+                            android:textSize="8sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="221"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="book now"
+            android:backgroundTint="@color/teal_700"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

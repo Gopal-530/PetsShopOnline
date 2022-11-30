@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/page_title"
+        android:layout_height="85dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/my_acc"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsemibold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_bg__yellow"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/person"
+                android:layout_height="50dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Login"
+                android:fontFamily="@font/poppinsemibold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_bg__yellow"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/person_plus"
+                android:layout_height="50dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Register"
+                android:fontFamily="@font/poppinsemibold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+
+
+                <LinearLayout
+                    android:id="@+id/dashboard"
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:background="@drawable/layout_bg_black"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Dashboard"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+
+                <include
+                    android:id="@+id/dash_layout"
+                    android:visibility="gone"
+                    layout="@layout/dashboard_layout"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/track_order"
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout_bg_black"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Track Your Order"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/track_layout"
+                    android:visibility="gone"
+                    layout="@layout/track_your_order"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/my_address"
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout_bg_black"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="My Address"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/my_add_layout"
+                    android:visibility="gone"
+                    layout="@layout/my_add_layout"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/account_details"
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout_bg_black"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Account Details"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/account_layout"
+                    android:visibility="gone"
+                    layout="@layout/account_details"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:padding="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout_bg_black"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Logout"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@drawable/page_title"
+        android:layout_height="85dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Pets Dog"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsemibold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#F1D2D2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Top Rated Seller"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/top_related_seller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Explore"
+                        android:visibility="gone"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="-20dp"
+                            android:layout_marginBottom="10dp"
+                            android:scrollbars="none"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv1"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_3" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories1" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv1"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Dog"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+                                        <View
+                                            android:id="@+id/view_1"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv1"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv2"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_4" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories3" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv2"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Cat"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                        <View
+                                            android:id="@+id/view_2"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv2"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv3"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_9" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/category_9" />
+
+                                        <TextView
+                                            android:id="@+id/tv3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv3"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Birds"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+                                        <View
+                                            android:id="@+id/view_3"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv3"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <!--  <ImageView
+                                              android:id="@+id/iv7"
+                                              android:layout_width="120dp"
+                                              android:layout_height="140dp"
+                                              android:src="@drawable/graph_2" />
+
+                                          <de.hdodenhof.circleimageview.CircleImageView
+                                              android:layout_width="60dp"
+                                              android:layout_height="60dp"
+                                              android:layout_centerHorizontal="true"
+                                              android:layout_marginTop="35sp"
+                                              android:src="@drawable/categories2" />
+                      -->
+                                        <ImageView
+                                            android:id="@+id/iv7"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_04" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories4" />
+
+                                        <TextView
+                                            android:id="@+id/tv4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv7"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Small Animals"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+                                        <View
+                                            android:id="@+id/view_4"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv4"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+
+                                        <ImageView
+                                            android:id="@+id/iv4"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_2" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories2" />
+
+                                        <TextView
+                                            android:id="@+id/tv5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv4"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="All"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                        <View
+                                            android:id="@+id/view_5"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv5"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl6"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv5"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_5" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories5" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv6"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv5"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Pet Training"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                        <View
+                                            android:id="@+id/view_6"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv6"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl7"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv6"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_6" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/categories6" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv7"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv6"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Pet Comunity"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                        <View
+                                            android:id="@+id/view_7"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv7"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl8"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv8"
+                                            android:layout_width="80dp"
+                                            android:layout_height="140dp"
+                                            android:src="@drawable/graph_8" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="35sp"
+                                            android:src="@drawable/taxi" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv8"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/iv8"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="-35dp"
+                                            android:fontFamily="@font/poppinsemibold"
+                                            android:gravity="center"
+                                            android:minLines="2"
+                                            android:text="Pet Taxi"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                        <View
+                                            android:id="@+id/view_8"
+                                            android:layout_width="match_parent"
+                                            android:layout_below="@+id/tv8"
+                                            android:background="@color/light_blue_color"
+                                            android:layout_height="2dp"/>
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+                        </HorizontalScrollView>
+
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerexplores"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg1"
+                    android:visibility="gone"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:text="@string/pet_shop_desc"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Search by Brand Name:"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:layout_height="match_parent">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_bg"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:id="@+id/spinner"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="@color/darkgray"
+                            android:layout_height="match_parent">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

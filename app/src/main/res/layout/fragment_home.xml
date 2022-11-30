@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.petshop.online.viewModel.ExploreViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#fed753"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                //----Viewpager---//
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_3" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories1" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv1"
+                            android:layout_centerHorizontal="true"
+
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pets"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_4" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories3" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Store"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_9" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/category_9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Grooming"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!--  <ImageView
+                              android:id="@+id/iv7"
+                              android:layout_width="120dp"
+                              android:layout_height="140dp"
+                              android:src="@drawable/graph_2" />
+
+                          <de.hdodenhof.circleimageview.CircleImageView
+                              android:layout_width="60dp"
+                              android:layout_height="60dp"
+                              android:layout_centerHorizontal="true"
+                              android:layout_marginTop="35sp"
+                              android:src="@drawable/categories2" />
+      -->
+                        <ImageView
+                            android:id="@+id/iv7"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_04" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv7"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Clinic"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-15dp"
+                    android:gravity="center"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/iv4"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv4"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Boarding"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv5"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_5" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories5" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv5"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Training"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv6"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_6" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im7"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/categories6" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv6"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Comunity"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv8"
+                            android:layout_width="120dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/graph_8" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/im8"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35sp"
+                            android:src="@drawable/taxi" />
+
+
+                        <TextView
+                            android:id="@+id/it8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv8"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="-35dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:gravity="center"
+                            android:minLines="2"
+                            android:text="Pet Taxi"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                //---Sponsored Ads --//
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#eeeeee"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Sponsored Ads"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclersponsored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                //---Top rated seller --//
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f3d9d9"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:text="Top Rated Seller"
+                            android:textColor="@color/black" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppinsemibold"
+                            android:text="50% Off "
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="up to "
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="View all Sellers "
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10sp">
+
+
+                            </LinearLayout>
+
+
+                            <!-- <ImageView
+                                 android:layout_width="100dp"
+                                 android:layout_height="100dp"
+                                 android:src="@drawable/catg_dog"/>-->
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp" />
+                    </ScrollView>
+
+                </LinearLayout>
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:id="@+id/frameContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/bottomnavigation"
+                        android:layout_below="@+id/lins">
+
+                    </FrameLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/orange_dark_color" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/slider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange_dark_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#fed753"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Featured : Pet Stores"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="10sp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerFeatured"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#dddddd"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Store Gallery"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerStore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#def5f9"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Explore"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerexplore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/orange_dark_color" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/sliderexplore"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange_dark_color" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#fed753"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Featured : Pet Grooming"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="10sp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn3"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerFeaturedGrooming"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#def5f9"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Featured : Pet Clinic"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10sp"
+                            android:visibility="gone">
+
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="up to "
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsemibold"
+                                android:text="50% Off "
+                                android:textColor="@color/black"
+                                android:textSize="20dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="View all Sellers "
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerpetclinic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#fed753"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Featured : Pet Boarding"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="10sp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn4"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerFeaturedBoardng"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#f3d9d9"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Featured : Pet Training"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll2"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10sp"
+                            android:visibility="gone">
+
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Discount on Pet Training"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsemibold"
+                                android:text="25% Off "
+                                android:textColor="@color/black"
+                                android:textSize="22dp" />
+
+
+                        </LinearLayout>
+
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerpettraining"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/orange_dark_color" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/sliderBest"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange_dark_color" />
+
+                ///---Best seller pet food--//
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="#f8f8f8"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Best Seller"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="10sp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="View all"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn5"
+                        android:orientation="horizontal">
+
+                        <!-- <ImageView
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:src="@drawable/catg_dog"/>-->
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerBest_seller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/offer4" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/offer5" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:text="Review"
+                        android:textColor="@color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</layout>
