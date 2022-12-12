@@ -54,6 +54,7 @@ class One : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+/*
 
         recycler1.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         recycler1.setHasFixedSize(true)
@@ -61,6 +62,7 @@ class One : Fragment() {
             requireContext()
         )
 
+*/
 
         imge.setOnClickListener {
 
@@ -94,12 +96,12 @@ class One : Fragment() {
             transaction.commit()*/
 
 
-            val ft = fragmentManager!!.beginTransaction()
+         /*   val ft = fragmentManager!!.beginTransaction()
                 .replace(R.id.frameContainer, newFragment)
                 .addToBackStack(null)
                 .addSharedElement(imge, "imageTrans")
 
-            ft.commit()
+            ft.commit()*/
         }
 
 

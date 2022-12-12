@@ -13,12 +13,14 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.petshop.online.R
+import com.petshop.online.ResponseApi.FeaturesResponse
+import com.petshop.online.ResponseApi.TopratedSeller
 import com.squareup.picasso.Picasso
 
 
 class FeaturedAdapetr(
     var context: Context,
-
+    var list: ArrayList<FeaturesResponse.Data>
     ) : RecyclerView.Adapter<FeaturedAdapetr.ExerciseHodlder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHodlder {
@@ -39,6 +41,15 @@ class FeaturedAdapetr(
 
 
 
+        holder.text.setText(list[position].companyname)
+
+        var path=list[position].ImagePath.replace(" ", "%20")
+        Picasso.get()
+            .load(path)
+            .into(holder.image)
+
+
+       /*
         if (position == 0) {
 
             holder.text.setText("Pet Store 1")
@@ -95,7 +106,7 @@ class FeaturedAdapetr(
 
 
 
-
+*/
         holder.card.startAnimation(
             AnimationUtils.loadAnimation(
                 holder.itemView.context,
@@ -107,7 +118,7 @@ class FeaturedAdapetr(
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return list.size
     }
 
 

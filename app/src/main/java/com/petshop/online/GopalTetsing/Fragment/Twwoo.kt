@@ -50,12 +50,12 @@ class Twwoo : Fragment() {
        /* sharedElementEnterTransition = TransitionInflater.from(requireContext())
             .inflateTransition(R.transition.shared_image)
 */
-
+/*
         recycler1.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         recycler1.setHasFixedSize(true)
         recycler1.adapter = Adapter1(
             requireContext()
-        )
+        )*/
 
     }
 }

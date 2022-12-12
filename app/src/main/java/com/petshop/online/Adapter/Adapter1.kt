@@ -13,13 +13,15 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.petshop.online.R
+import com.petshop.online.ResponseApi.StoreGalleriesResponse
+import com.petshop.online.ResponseApi.TopratedSeller
 import com.squareup.picasso.Picasso
 
 
 class Adapter1(
     var context: Context,
-
-    ) : RecyclerView.Adapter<Adapter1.ExerciseHodlder>() {
+    var list: ArrayList<TopratedSeller.Data>
+) : RecyclerView.Adapter<Adapter1.ExerciseHodlder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHodlder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.recy1_layout, parent, false)
@@ -30,22 +32,28 @@ class Adapter1(
     override fun onBindViewHolder(holder: ExerciseHodlder, position: Int) {
 
 
-       /* if (position == 0) {
-            holder.ll1.visibility = View.GONE
-            holder.ll2.visibility = View.VISIBLE
+        holder.text.text = list[position].companyname
+        Picasso.get()
+            .load(list[position].ImagePath)
+            .into(holder.image)
+        /* if (position == 0) {
+             holder.ll1.visibility = View.GONE
+             holder.ll2.visibility = View.VISIBLE
 
 
-        } else {
-            holder.ll2.visibility = View.GONE
-            holder.ll1.visibility = View.VISIBLE
+         } else {
+             holder.ll2.visibility = View.GONE
+             holder.ll1.visibility = View.VISIBLE
 
-        }*/
+         }*/
 
 
         holder.ll2.visibility = View.GONE
         holder.ll1.visibility = View.VISIBLE
 
 
+        //---for static data ---//
+/*
 
         if (position == 1) {
             holder.text.text = "Pet Seller 1"
@@ -54,8 +62,6 @@ class Adapter1(
                 .load(R.drawable.categories1)
                 .into(holder.image)
         }
-
-
         if (position == 2) {
             holder.text.text = "Pet Seller 2"
 
@@ -63,8 +69,6 @@ class Adapter1(
                 .load(R.drawable.categories2)
                 .into(holder.image)
         }
-
-
         if (position == 3) {
             holder.text.text = "Pet Seller 3"
 
@@ -122,7 +126,10 @@ class Adapter1(
                 .load(R.drawable.categories5)
                 .into(holder.image)
         }
+*/
 
+
+//---end ---//
 
 
         holder.card.startAnimation(
@@ -136,7 +143,7 @@ class Adapter1(
     }
 
     override fun getItemCount(): Int {
-        return 8
+        return list.size
     }
 
     fun setFadeAnimation(view: View) {

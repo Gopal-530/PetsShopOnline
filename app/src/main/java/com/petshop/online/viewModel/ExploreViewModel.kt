@@ -4,6 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.petshop.online.ResponseApi.ExploreResponse
+import com.petshop.online.ResponseApi.FeaturesResponse
+import com.petshop.online.ResponseApi.StoreGalleriesResponse
+import com.petshop.online.ResponseApi.TopratedSeller
 import com.petshop.online.viewModel.Navigator.LikedProfileNavigator
 import com.petshop.online.base.BaseViewModel
 import com.rehablab.api.APIUtils
@@ -16,15 +19,195 @@ import java.io.IOException
 class ExploreViewModel : BaseViewModel<LikedProfileNavigator>() {
     private val TAG = "LikedProfileViewModel"
     private var mLikedProfileMutable: MutableLiveData<ExploreResponse>? = null
+    private var mStoreGalleryMutable: MutableLiveData<StoreGalleriesResponse>? = null
+    private var mTopRatedSellerMutable: MutableLiveData<TopratedSeller>? = null
+    private var mFeaturedPetStoreMutable: MutableLiveData<FeaturesResponse>? = null
 
-
-    fun getLikedProfiles(): LiveData<ExploreResponse> {
+    //-------------For explore------------//
+    fun getExploremodel(): LiveData<ExploreResponse> {
         mLikedProfileMutable = MutableLiveData()
-        getProfiles()
+        getExplore()
         return mLikedProfileMutable!!
     }
 
-    private fun getProfiles() {
+    //-----for store gallery-----//
+
+    fun getStoreGAllerymodel(): LiveData<StoreGalleriesResponse> {
+        mStoreGalleryMutable = MutableLiveData()
+        getStaoreGallery()
+        return mStoreGalleryMutable!!
+    }
+
+    //---TopratedSeller---//
+
+    fun getTopratedSeleermodel(): LiveData<TopratedSeller> {
+        mTopRatedSellerMutable = MutableLiveData()
+        getTopratedSellert()
+        return mTopRatedSellerMutable!!
+    }
+
+    //---FeaturedPetstore---//
+
+    fun getFeaturePetstoremodel(): LiveData<FeaturesResponse> {
+        mFeaturedPetStoreMutable = MutableLiveData()
+        getFeaturepet()
+        return mFeaturedPetStoreMutable!!
+    }
+
+    private fun getFeaturepet() {
+
+        val call: Call<FeaturesResponse> = APIUtils.getServiceAPI()!!.featuresStore()
+        try {
+            call.enqueue(object : Callback<FeaturesResponse> {
+                override fun onResponse(
+                    call: Call<FeaturesResponse>,
+                    response: Response<FeaturesResponse>
+                ) {
+
+                    try {
+                        if (response.isSuccessful && response.body() != null) {
+                            mFeaturedPetStoreMutable?.value = response.body()
+                        } else {
+                            if (response.body() != null) {
+                                getNavigator()?.onError(response.body()?.result!!)
+                            } else if (response.errorBody() != null) {
+                                try {
+                                    val str = response.errorBody()!!.string()
+                                    Log.d(
+                                        TAG,
+                                        "onError: $str"
+                                    )
+                                    getNavigator()?.onError(str)
+                                } catch (e: IOException) {
+                                    e.printStackTrace()
+                                }
+                            } else {
+                                getNavigator()?.onError("Something went wrong!")
+                            }
+                        }
+                    } catch (e: Exception) {
+
+                    }
+
+
+                }
+
+                override fun onFailure(call: Call<FeaturesResponse>, t: Throwable) {
+                    getNavigator()?.onError(t.localizedMessage)
+                    Log.d(TAG, "onFailure: ${t.localizedMessage}")
+                }
+
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+    }
+
+
+    private fun getTopratedSellert() {
+
+        val call: Call<TopratedSeller> = APIUtils.getServiceAPI()!!.topratedSeller()
+        try {
+            call.enqueue(object : Callback<TopratedSeller> {
+                override fun onResponse(
+                    call: Call<TopratedSeller>,
+                    response: Response<TopratedSeller>
+                ) {
+
+                    try {
+                        if (response.isSuccessful && response.body() != null) {
+                            mTopRatedSellerMutable?.value = response.body()
+                        } else {
+                            if (response.body() != null) {
+                                getNavigator()?.onError(response.body()?.result!!)
+                            } else if (response.errorBody() != null) {
+                                try {
+                                    val str = response.errorBody()!!.string()
+                                    Log.d(
+                                        TAG,
+                                        "onError: $str"
+                                    )
+                                    getNavigator()?.onError(str)
+                                } catch (e: IOException) {
+                                    e.printStackTrace()
+                                }
+                            } else {
+                                getNavigator()?.onError("Something went wrong!")
+                            }
+                        }
+                    } catch (e: Exception) {
+
+                    }
+
+
+                }
+
+                override fun onFailure(call: Call<TopratedSeller>, t: Throwable) {
+                    getNavigator()?.onError(t.localizedMessage)
+                    Log.d(TAG, "onFailure: ${t.localizedMessage}")
+                }
+
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+    }
+
+
+    private fun getStaoreGallery() {
+
+        val call: Call<StoreGalleriesResponse> = APIUtils.getServiceAPI()!!.callStore()
+        try {
+            call.enqueue(object : Callback<StoreGalleriesResponse> {
+                override fun onResponse(
+                    call: Call<StoreGalleriesResponse>,
+                    response: Response<StoreGalleriesResponse>
+                ) {
+
+                    try {
+                        if (response.isSuccessful && response.body() != null) {
+                            mStoreGalleryMutable?.value = response.body()
+                        } else {
+                            if (response.body() != null) {
+                                getNavigator()?.onError(response.body()?.result!!)
+                            } else if (response.errorBody() != null) {
+                                try {
+                                    val str = response.errorBody()!!.string()
+                                    Log.d(
+                                        TAG,
+                                        "onError: $str"
+                                    )
+                                    getNavigator()?.onError(str)
+                                } catch (e: IOException) {
+                                    e.printStackTrace()
+                                }
+                            } else {
+                                getNavigator()?.onError("Something went wrong!")
+                            }
+                        }
+                    } catch (e: Exception) {
+
+                    }
+
+
+                }
+
+                override fun onFailure(call: Call<StoreGalleriesResponse>, t: Throwable) {
+                    getNavigator()?.onError(t.localizedMessage)
+                    Log.d(TAG, "onFailure: ${t.localizedMessage}")
+                }
+
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+    }
+
+
+    private fun getExplore() {
 
         val call: Call<ExploreResponse> = APIUtils.getServiceAPI()!!.callExplore()
         try {

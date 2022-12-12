@@ -89,6 +89,7 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : ViewModel> : Fragment() {
         val view: View =
             LayoutInflater.from(mContext).inflate(R.layout.progress_dialog, null, false)
         dialog.setContentView(view)
+        dialog.getWindow()!!.setBackgroundDrawableResource(android.R.color.transparent);
         if (isShow) {
             if (!dialog.isShowing) dialog.show()
         } else {

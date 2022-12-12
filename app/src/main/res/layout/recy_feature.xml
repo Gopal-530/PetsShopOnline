@@ -15,14 +15,17 @@
         <ImageView
             android:id="@+id/ivImgee"
             android:layout_width="170dp"
-            android:scaleType="fitXY"
             android:layout_height="110dp"/>
         <TextView
             android:id="@+id/tvText"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:layout_gravity="center"
+            android:maxLines="2"
+            android:minLines="2"
+            android:ellipsize="end"
             android:textSize="12sp"
             android:layout_marginTop="5dp"
 
