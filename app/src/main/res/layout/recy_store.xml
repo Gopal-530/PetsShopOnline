@@ -32,10 +32,11 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/tvTextdb"
+            android:id="@+id/companyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:text="Dubai"
             android:textColor="@color/black" />
 
@@ -73,7 +74,13 @@
             android:id="@+id/vediovt"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+
+
             android:layout_centerInParent="true"
+
+
+            android:background="#0000"
+            android:descendantFocusability="blocksDescendants"
             android:minHeight="1dp"
             android:scaleType="fitXY">
 

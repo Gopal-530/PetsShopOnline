@@ -32,6 +32,9 @@ import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import androidx.lifecycle.Observer
+import com.petshop.online.ResponseApi.FeaturesResponse
+import com.petshop.online.ResponseApi.StoreGalleriesResponse
+import com.petshop.online.ResponseApi.TopratedSeller
 import com.petshop.online.viewModel.ExploreViewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), LikedProfileNavigator {
@@ -211,20 +214,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
              }
          }
  */
+
+
+
+    /*
         recycler1.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
         recycler1.setHasFixedSize(true)
         recycler1.adapter = Adapter1(
             mContext
         )
+*/
 
 
 
-
-
+/*
 
         recyclerFeatured.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
         recyclerFeatured.setHasFixedSize(true)
-        recyclerFeatured.adapter = FeaturedAdapetr(mContext)
+        recyclerFeatured.adapter = FeaturedAdapetr(mContext)*/
 
 
       /*  try {
@@ -295,29 +302,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
         //---to be
 
 
-        recyclerFeaturedGrooming.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclerFeaturedGrooming.setHasFixedSize(true)
-        recyclerFeaturedGrooming.adapter = FeaturedAdapetr(mContext)
-
-        recyclerFeaturedBoardng.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclerFeaturedBoardng.setHasFixedSize(true)
-        recyclerFeaturedBoardng.adapter = FeaturedAdapetr(mContext)
-
-
-        recyclerpetclinic.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclerpetclinic.setHasFixedSize(true)
-        recyclerpetclinic.adapter = FeaturedAdapetr(
-            mContext
-        )
-
-        recyclerpettraining.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclerpettraining.setHasFixedSize(true)
-        recyclerpettraining.adapter = FeaturedAdapetr(
-            mContext
-        )
-
-
-
 
         btn.setOnClickListener {
             loadFragment(PetShoopFragment())
@@ -360,10 +344,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
 
 
 
+/*
 
         recyclerStore.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
         recyclerStore.setHasFixedSize(true)
         recyclerStore.adapter = StoreAdapter(mContext)
+*/
 
        // scrollable.post(Runnable { scrollable.fullScroll(scrollable.FOCUS_UP) })
 /*
@@ -395,9 +381,111 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
 
       //  tabLayout!!.setupWithViewPager(view_pager)
         getexplore()
+        getStoreGallery()
+        getTopratedSeller()
+        getFeaturedPetstore()
+
     }
 
+    private fun getFeaturedPetstore() {
+        showHideProgress(true, mContext)
 
+
+        try {
+            viewModel.getFeaturePetstoremodel().observe(requireActivity(), Observer {
+                showHideProgress(false, mContext)
+
+                if (it.data.isNotEmpty()) {
+
+                    var list = ArrayList<FeaturesResponse.Data>()
+                    list.addAll(it.data)
+
+                    recyclerFeatured.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerFeatured.setHasFixedSize(true)
+                    recyclerFeatured.adapter = FeaturedAdapetr(mContext,list)
+
+
+                    recyclerFeaturedGrooming.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerFeaturedGrooming.setHasFixedSize(true)
+                    recyclerFeaturedGrooming.adapter = FeaturedAdapetr(mContext,list)
+
+                    recyclerFeaturedBoardng.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerFeaturedBoardng.setHasFixedSize(true)
+                    recyclerFeaturedBoardng.adapter = FeaturedAdapetr(mContext,list)
+
+
+                    recyclerpetclinic.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerpetclinic.setHasFixedSize(true)
+                    recyclerpetclinic.adapter = FeaturedAdapetr(mContext,list)
+
+                    recyclerpettraining.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerpettraining.setHasFixedSize(true)
+                    recyclerpettraining.adapter =FeaturedAdapetr(mContext,list)
+
+
+
+                }
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+
+    }
+
+    private fun getTopratedSeller() {
+        showHideProgress(true, mContext)
+
+
+        try {
+            viewModel.getTopratedSeleermodel().observe(requireActivity(), Observer {
+                showHideProgress(false, mContext)
+
+                if (it.data.isNotEmpty()) {
+
+                    var list = ArrayList<TopratedSeller.Data>()
+                    list.addAll(it.data)
+
+                    recycler1.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recycler1.setHasFixedSize(true)
+                    recycler1.adapter = Adapter1(mContext,list)
+
+
+
+                }
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+
+    }
+
+    private fun getStoreGallery() {
+        showHideProgress(true, mContext)
+
+
+        try {
+            viewModel.getStoreGAllerymodel().observe(requireActivity(), Observer {
+                showHideProgress(false, mContext)
+
+                if (it.data.isNotEmpty()) {
+
+                    var list = ArrayList<StoreGalleriesResponse.Data>()
+                    list.addAll(it.data)
+
+                    recyclerStore.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerStore.setHasFixedSize(true)
+                    recyclerStore.adapter = StoreAdapter(mContext,list)
+
+                }
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+
+    }
 
 
     private fun getexplore() {
@@ -405,7 +493,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
 
 
         try {
-            viewModel.getLikedProfiles().observe(requireActivity(), Observer {
+            viewModel.getExploremodel().observe(requireActivity(), Observer {
                 showHideProgress(false, mContext)
 
                 if (it.data.isNotEmpty()) {

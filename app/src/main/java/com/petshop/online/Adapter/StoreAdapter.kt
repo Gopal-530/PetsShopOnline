@@ -14,14 +14,15 @@ import android.widget.VideoView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.petshop.online.R
+import com.petshop.online.ResponseApi.ExploreResponse
+import com.petshop.online.ResponseApi.StoreGalleriesResponse
 import com.squareup.picasso.Picasso
-
 
 
 class StoreAdapter(
     var context: Context,
-
-    ) : RecyclerView.Adapter<StoreAdapter.ExerciseHodlder>() {
+    var list: ArrayList<StoreGalleriesResponse.Data>
+) : RecyclerView.Adapter<StoreAdapter.ExerciseHodlder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHodlder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.recy_store, parent, false)
@@ -31,41 +32,63 @@ class StoreAdapter(
 
     override fun onBindViewHolder(holder: ExerciseHodlder, position: Int) {
 
-        var path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video1
 
-        if (position == 0) {
-            path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video1
-            holder.vediovt.setVideoURI(Uri.parse(path))
+        holder.text.setText(list[position].type)
+        holder.companyName.setText(list[position].companyname)
+
+        var path = list[position].ImagePath
+        holder.vediovt.setVideoURI(Uri.parse(path))
+        holder.vediovt.start()
+        holder.vediovt.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+
             holder.vediovt.start()
-            holder.vediovt.setOnCompletionListener(MediaPlayer.OnCompletionListener {
-
-                holder.vediovt.start()
-            })
+        })
 
 
 
 
-        }
-        if (position == 1) {
-            path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video3
-            holder.vediovt.setVideoURI(Uri.parse(path))
-            holder.vediovt.start()
-            holder.vediovt.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+       // videoView.setVideoURI(Uri.parse("https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"));
 
-                holder.vediovt.start()
-            })
-        }
+        //----for start static data --//
 
-        holder.setIsRecyclable(false);
+        /*
+           var path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video1
 
-        holder.text.setText("Pet Choice")
+           if (position == 0) {
+               path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video1
+               holder.vediovt.setVideoURI(Uri.parse(path))
+               holder.vediovt.start()
+               holder.vediovt.setOnCompletionListener(MediaPlayer.OnCompletionListener {
 
-       /* Picasso.get()
-            .load(R.drawable.categories5)
-            .into(holder.image)
+                   holder.vediovt.start()
+               })
 
 
-*/
+
+
+           }
+           if (position == 1) {
+               path = "android.resource://" + context.getPackageName().toString() + "/" + R.raw.video3
+               holder.vediovt.setVideoURI(Uri.parse(path))
+               holder.vediovt.start()
+               holder.vediovt.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+
+                   holder.vediovt.start()
+               })
+           }
+
+           holder.setIsRecyclable(false);
+
+           holder.text.setText("Pet Choice")*/
+
+        //---end--//
+
+        /* Picasso.get()
+             .load(R.drawable.categories5)
+             .into(holder.image)
+
+
+ */
 
         /*holder.card.startAnimation(
             AnimationUtils.loadAnimation(
@@ -78,21 +101,23 @@ class StoreAdapter(
     }
 
     override fun getItemCount(): Int {
-        return 2
+        return list.size
     }
 
 
     inner class ExerciseHodlder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         lateinit var image: ImageView
         lateinit var text: TextView
+        lateinit var companyName: TextView
         lateinit var vediovt: VideoView
 
         lateinit var card: LinearLayout
 
 
         init {
-        //    image = itemView.findViewById(R.id.ivImgee)
+            //    image = itemView.findViewById(R.id.ivImgee)
             text = itemView.findViewById(R.id.tvTexxxt)
+            companyName = itemView.findViewById(R.id.companyName)
             card = itemView.findViewById(R.id.card)
             vediovt = itemView.findViewById(R.id.vediovt)
 

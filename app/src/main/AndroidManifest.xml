@@ -30,6 +30,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsShopOnline">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".GopalTetsing.Collapsing"
             android:exported="false" />
         <activity
@@ -39,7 +42,7 @@
             android:name=".GopalTetsing.Transform"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splash.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
