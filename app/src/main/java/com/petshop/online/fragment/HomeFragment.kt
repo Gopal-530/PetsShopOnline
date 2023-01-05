@@ -1,6 +1,7 @@
 package com.petshop.online.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -32,7 +33,9 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import androidx.lifecycle.Observer
 import com.petshop.online.Adapter.HomeAdapter.*
+import com.petshop.online.MainActivity
 import com.petshop.online.ResponseApi.*
+import com.petshop.online.activity.PetTrainingActivity
 import com.petshop.online.viewModel.ExploreViewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), LikedProfileNavigator {
@@ -319,7 +322,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
             loadFragment(PetSalonFragment("pet_grooming"))
         }
         iv5.setOnClickListener {
-            loadFragment(PetSalonFragment("pet_grooming"))
+            val intent = Intent(this, PetTrainingActivity::class.java)
+            startActivity(intent)
+           // loadFragment(PetSalonFragment("pet_grooming"))
         }
         iv6.setOnClickListener {
             loadFragment(PetSalonFragment("pet_grooming"))
@@ -328,6 +333,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
         iv1.setOnClickListener {
             loadFragment(PetListFragment())
         }
+
+
 
 
 

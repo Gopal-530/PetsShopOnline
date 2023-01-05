@@ -1,4 +1,4 @@
-package com.rehablab.api
+package com.petshop.online.api
 
 
 class APIUtils {

@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.petshop.online.ResponseApi.*
 import com.petshop.online.viewModel.Navigator.LikedProfileNavigator
 import com.petshop.online.base.BaseViewModel
-import com.rehablab.api.APIUtils
+import com.petshop.online.api.APIUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

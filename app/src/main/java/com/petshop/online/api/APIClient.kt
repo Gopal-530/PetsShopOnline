@@ -1,4 +1,4 @@
-package com.rehablab.api
+package com.petshop.online.api
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
