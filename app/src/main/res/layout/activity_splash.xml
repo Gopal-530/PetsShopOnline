@@ -7,7 +7,6 @@
     tools:context=".splash.Splash">
 
 
-
     <RelativeLayout
         android:layout_width="215dp"
         android:layout_height="215dp"

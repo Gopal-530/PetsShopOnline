@@ -7,6 +7,7 @@ class APIUtils {
 
 
 
+       // private val BASE_URL = "https://petshoponline.ae/demo/mobileapi.asmx/"
         private val BASE_URL = "https://petshoponline.ae/demo/mobileapi.asmx/"
 
         fun getServiceAPI(): APIConfiguration? {

@@ -1,9 +1,6 @@
 package com.rehablab.api
 
-import com.petshop.online.ResponseApi.ExploreResponse
-import com.petshop.online.ResponseApi.FeaturesResponse
-import com.petshop.online.ResponseApi.StoreGalleriesResponse
-import com.petshop.online.ResponseApi.TopratedSeller
+import com.petshop.online.ResponseApi.*
 
 import retrofit2.Call
 import retrofit2.http.*
@@ -26,6 +23,10 @@ interface APIConfiguration {
 
     @POST("featuredpetstores")
     fun featuresStore():Call<FeaturesResponse>
+
+    @POST("homeapi")
+    fun callHomeapi():Call<HomeResponce>
+
 
 }
 

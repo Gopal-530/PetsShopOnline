@@ -3,10 +3,7 @@ package com.petshop.online.viewModel
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.petshop.online.ResponseApi.ExploreResponse
-import com.petshop.online.ResponseApi.FeaturesResponse
-import com.petshop.online.ResponseApi.StoreGalleriesResponse
-import com.petshop.online.ResponseApi.TopratedSeller
+import com.petshop.online.ResponseApi.*
 import com.petshop.online.viewModel.Navigator.LikedProfileNavigator
 import com.petshop.online.base.BaseViewModel
 import com.rehablab.api.APIUtils
@@ -22,6 +19,7 @@ class ExploreViewModel : BaseViewModel<LikedProfileNavigator>() {
     private var mStoreGalleryMutable: MutableLiveData<StoreGalleriesResponse>? = null
     private var mTopRatedSellerMutable: MutableLiveData<TopratedSeller>? = null
     private var mFeaturedPetStoreMutable: MutableLiveData<FeaturesResponse>? = null
+    private var mLikedHome: MutableLiveData<HomeResponce>? = null
 
     //-------------For explore------------//
     fun getExploremodel(): LiveData<ExploreResponse> {
@@ -53,6 +51,13 @@ class ExploreViewModel : BaseViewModel<LikedProfileNavigator>() {
         getFeaturepet()
         return mFeaturedPetStoreMutable!!
     }
+
+    fun getHomemodel(): LiveData<HomeResponce> {
+        mLikedHome = MutableLiveData()
+        getHomeapi()
+        return mLikedHome!!
+    }
+
 
     private fun getFeaturepet() {
 
@@ -256,6 +261,58 @@ class ExploreViewModel : BaseViewModel<LikedProfileNavigator>() {
         }
 
     }
+
+
+    private fun getHomeapi() {
+
+        val call: Call<HomeResponce> = APIUtils.getServiceAPI()!!.callHomeapi()
+        try {
+            call.enqueue(object : Callback<HomeResponce> {
+                override fun onResponse(
+                    call: Call<HomeResponce>,
+                    response: Response<HomeResponce>
+                ) {
+
+                    try {
+                        if (response.isSuccessful && response.body() != null) {
+                            mLikedHome?.value = response.body()
+                        } else {
+                            if (response.body() != null) {
+                               // getNavigator()?.onError(response.body()?.result!!)
+                            } else if (response.errorBody() != null) {
+                                try {
+                                    val str = response.errorBody()!!.string()
+                                    Log.d(
+                                        TAG,
+                                        "onError: $str"
+                                    )
+                                    getNavigator()?.onError(str)
+                                } catch (e: IOException) {
+                                    e.printStackTrace()
+                                }
+                            } else {
+                                getNavigator()?.onError("Something went wrong!")
+                            }
+                        }
+                    } catch (e: Exception) {
+
+                    }
+
+
+                }
+
+                override fun onFailure(call: Call<HomeResponce>, t: Throwable) {
+                    getNavigator()?.onError(t.localizedMessage)
+                    Log.d(TAG, "onFailure: ${t.localizedMessage}")
+                }
+
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+    }
+
 
     /* fun getFilteredProfile(postData: HashMap<String,String>): LiveData<LikedProfileResponse> {
          mFilterMutableData = MutableLiveData()

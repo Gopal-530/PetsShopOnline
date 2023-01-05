@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.petshop.online.Adapter.*
 import com.petshop.online.GopalTetsing.Recycler
 import com.petshop.online.R
-import com.petshop.online.ResponseApi.ExploreResponse
 import com.petshop.online.SliderAdapter
 import com.petshop.online.SliderData
 
@@ -32,9 +31,8 @@ import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import androidx.lifecycle.Observer
-import com.petshop.online.ResponseApi.FeaturesResponse
-import com.petshop.online.ResponseApi.StoreGalleriesResponse
-import com.petshop.online.ResponseApi.TopratedSeller
+import com.petshop.online.Adapter.HomeAdapter.*
+import com.petshop.online.ResponseApi.*
 import com.petshop.online.viewModel.ExploreViewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), LikedProfileNavigator {
@@ -102,7 +100,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
         sliderDataArrayList.add(SliderData("https://firebasestorage.googleapis.com/v0/b/cl-publication.appspot.com/o/banner-03.jpg?alt=media&token=b80d060f-01d8-4616-99e2-3aee2a8e14d8"))
 
         val adapter = SliderAdapter(mContext, sliderDataArrayList)
-        slider.setSliderAdapter(adapter)
+       // slider.setSliderAdapter(adapter)
         slider.setIndicatorAnimation(IndicatorAnimationType.WORM);
         slider.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION);
         slider.startAutoCycle();
@@ -285,11 +283,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
         ///recyclerview
 
 
-        recyclerBest_seller.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclerBest_seller.setHasFixedSize(true)
-        recyclerBest_seller.adapter = BestSellerAdapter(
-            mContext
-        )
+
 
 
 
@@ -335,12 +329,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
             loadFragment(PetListFragment())
         }
 
-        recyclersponsored.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-        recyclersponsored.setHasFixedSize(true)
-        recyclersponsored.adapter = SponsoredAdapter(mContext)
-        recyclersponsored.smoothScrollToPosition(1)
-        val snapHelper = LinearSnapHelper()
-        snapHelper.attachToRecyclerView(recyclersponsored)
+
 
 
 
@@ -380,9 +369,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
 
 
       //  tabLayout!!.setupWithViewPager(view_pager)
-        getexplore()
-        getStoreGallery()
-        getTopratedSeller()
+      //  getexplore()
+        getHome()
+      //  getStoreGallery()
+      //  getTopratedSeller()
         getFeaturedPetstore()
 
     }
@@ -400,27 +390,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
                     var list = ArrayList<FeaturesResponse.Data>()
                     list.addAll(it.data)
 
-                    recyclerFeatured.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-                    recyclerFeatured.setHasFixedSize(true)
-                    recyclerFeatured.adapter = FeaturedAdapetr(mContext,list)
 
 
-                    recyclerFeaturedGrooming.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-                    recyclerFeaturedGrooming.setHasFixedSize(true)
-                    recyclerFeaturedGrooming.adapter = FeaturedAdapetr(mContext,list)
-
-                    recyclerFeaturedBoardng.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-                    recyclerFeaturedBoardng.setHasFixedSize(true)
-                    recyclerFeaturedBoardng.adapter = FeaturedAdapetr(mContext,list)
 
 
-                    recyclerpetclinic.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-                    recyclerpetclinic.setHasFixedSize(true)
-                    recyclerpetclinic.adapter = FeaturedAdapetr(mContext,list)
-
-                    recyclerpettraining.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
-                    recyclerpettraining.setHasFixedSize(true)
-                    recyclerpettraining.adapter =FeaturedAdapetr(mContext,list)
 
 
 
@@ -513,6 +486,133 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, ExploreViewModel>(), Like
 
 
     }
+
+
+    private fun getHome() {
+        showHideProgress(true, mContext)
+
+
+        try {
+            viewModel.getHomemodel().observe(requireActivity(), Observer {
+                showHideProgress(false, mContext)
+
+                var explore = ArrayList<HomeResponce.Explore>()
+                explore.addAll(it.explore)
+
+                recyclerexplore.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerexplore.setHasFixedSize(true)
+                recyclerexplore.adapter = ExploreAdapter(mContext,explore)
+
+                var storegallery = ArrayList<HomeResponce.Storegallery>()
+                storegallery.addAll(it.storegallery)
+
+                recyclerStore.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerStore.setHasFixedSize(true)
+                recyclerStore.adapter = StoreGalleryAdapter(mContext,storegallery)
+
+
+                var topratedseller = ArrayList<HomeResponce.TopratedsellerX>()
+                topratedseller.addAll(it.topratedseller)
+
+                recycler1.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recycler1.setHasFixedSize(true)
+                recycler1.adapter = TopRelatedSellerAdapter(mContext,topratedseller)
+
+
+                var featuredpetstores = ArrayList<HomeResponce.Featuredpetstore>()
+                featuredpetstores.addAll(it.featuredpetstores)
+
+                recyclerFeatured.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerFeatured.setHasFixedSize(true)
+                recyclerFeatured.adapter = FeaturedStoredAdapter(mContext,featuredpetstores)
+
+
+
+                var sponsoredads = ArrayList<HomeResponce.Sponsoredads>()
+                sponsoredads.addAll(it.sponsoredads)
+
+                recyclersponsored.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclersponsored.setHasFixedSize(true)
+                recyclersponsored.adapter = SponsoredAdsAdapter(mContext,sponsoredads)
+               // recyclersponsored.smoothScrollToPosition(0)
+                val snapHelper = LinearSnapHelper()
+                snapHelper.attachToRecyclerView(recyclersponsored)
+
+
+
+                var banner = ArrayList<HomeResponce.Banner>()
+                banner.addAll(it.banner)
+                val adapter = TopBannerAdapter(mContext, banner)
+                 slider.setSliderAdapter(adapter)
+
+                slider.setIndicatorAnimation(IndicatorAnimationType.WORM);
+                slider.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION);
+                slider.startAutoCycle();
+                slider.setIndicatorSelectedColor(Color.WHITE);
+                slider.setIndicatorUnselectedColor(Color.GRAY);
+                slider.setScrollTimeInSec(2); //set scroll delay in seconds :
+                slider.startAutoCycle()
+
+
+                var featuredgrooming = ArrayList<HomeResponce.Featuredgrooming>()
+                featuredgrooming.addAll(it.featuredgrooming)
+
+                recyclerFeaturedGrooming.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerFeaturedGrooming.setHasFixedSize(true)
+                recyclerFeaturedGrooming.adapter = FeaturedGroomingAdapetr(mContext,featuredgrooming)
+
+
+                var featuredpetclinic = ArrayList<HomeResponce.Featuredpetclinic>()
+                featuredpetclinic.addAll(it.featuredpetclinic)
+                recyclerpetclinic.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerpetclinic.setHasFixedSize(true)
+                recyclerpetclinic.adapter = FeaturedClinicAdapeter(mContext,featuredpetclinic)
+
+
+                var featuredboarding = ArrayList<HomeResponce.FeaturedBoarding>()
+                featuredboarding.addAll(it.featuredboarding)
+                recyclerFeaturedBoardng.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerFeaturedBoardng.setHasFixedSize(true)
+                recyclerFeaturedBoardng.adapter = FeaturedBoardingAdapeter(mContext,featuredboarding)
+
+
+
+                var featuredtraining = ArrayList<HomeResponce.Featuredtraning>()
+                featuredtraining.addAll(it.featuredtraining)
+                recyclerpettraining.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerpettraining.setHasFixedSize(true)
+                recyclerpettraining.adapter =FeaturedTrainingAdapeter(mContext,featuredtraining)
+
+
+                var bestseller = ArrayList<HomeResponce.BestSeller>()
+                bestseller.addAll(it.bestseller)
+                recyclerBest_seller.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                recyclerBest_seller.setHasFixedSize(true)
+                recyclerBest_seller.adapter = BestSellerAdaptr(
+                    mContext,bestseller
+                )
+
+
+/*
+                if (it.explore.isEmpty()) {
+
+                    var list = ArrayList<HomeResponce.Explore>()
+                    list.addAll(it.explore)
+
+                    recyclerexplore.layoutManager = LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false)
+                    recyclerexplore.setHasFixedSize(true)
+                    recyclerexplore.adapter = ExploreAdapter(mContext,list)
+
+                }
+*/
+            })
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+
+    }
+
 
 
 
